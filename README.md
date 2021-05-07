@@ -70,7 +70,7 @@ Regarding **SENTIMENT ANALYSIS**, we used VADER's Sentiment Intensity Analyser l
 
 <img src="images/nlp.jpg" width=800>
 
-Finally a UI was built which gave visualization of how each model performed on the test data of 2019 and it was deployed using Amazon EC2.
+For more details about the project, check out the presentation pdf file. Finally a UI was built which gave visualization of how each model performed on the test data of 2019 and it was deployed using Amazon EC2.
 
 <img src="images/ui1.jpg" width="700">
 
@@ -79,4 +79,4 @@ Finally a UI was built which gave visualization of how each model performed on t
 About Project
 -
 
-This was done as a part of Capstone Project for Praxis Business School. Project members include: Hrisav Bhowmick, Ananda Chatterjee, Avinash Kr Yadav, Sankalpa Saha, Vineet Kumar. The project was done under the guidance of Prof Jaydip Sen.
+This was done as a part of end semester Capstone Project for Praxis Business School. Project members include: Hrisav Bhowmick, Ananda Chatterjee, Avinash Kr Yadav, Sankalpa Saha, Vineet Kumar. The project was done under the guidance of Prof Jaydip Sen.
