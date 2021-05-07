@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Infosys stock Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url("{{url_for('static',filename="bgblur.jpg")}}");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+
+    }
+
+  .navbar {
+  margin-bottom: 0;
+  background-color: #2f2f2f;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+  transition : 0.2s;
+
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: teal !important;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 2px solid white;
+  font-size:20px;
+  font-weight: bold;
+  opacity:1;
+
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.full-ht {
+
+  color: #fff;
+  height:100%;
+  font-family: Raleway; sans-serif;
+
+
+
+}
+.main{
+  padding-top: 20%;
+}
+.pred{
+     padding-right:50px;
+     padding-left:50px;
+    transition:1s;
+    background: #29a329;
+    border:2px solid #145214;
+}
+/*.pred:hover{
+  padding-right:80px;
+  padding-left:80px;
+  font-weight:bolder;
+  letter-spacing: 10px;
+  border:5px solid #14521;
+
+}*/
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid full-ht">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{url_for('home')}}" >Stock Price Prediction</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{url_for('about')}}">ABOUT</a></li>
+        <li><a href="">SERVICES</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center main">
+  <h1 style="font-size:500%;font-weight:1000;">Infosys Stock Price Prediction</h1>
+  <p style="font-size:120%"><b>Choose Model and click the button to start</b></p>
+  <form class="form-inline" action="{{ url_for('predict')}}" method="post">
+    <div class="row">
+        <div class="col-sm-6 text-right" style="color:black">
+          <select id="model" name="algo" style="width:250px;height:50px;font-size:15px;font-weight:bolder;">
+                  <option disabled selected style="padding-bottom:10px;font-size:20px;font-weight:bolder;">Select Model ....</option>
+                  <option value="1">Simple Average</option>
+                  <option value="2">Moving Average</option>
+                  <option value="3">Simple Exponential Smoothing</option>
+                  <option value="4">Holt Winter Exponential Smoothing</option>
+                  <option value="5">ARIMA</option>
+                  <option value="6">ARCH</option>
+                  <option value="7">GARCH</option>
+                  <option value="8">Random Forest</option>
+                  <option value="9">Gradient Boosting</option>
+                  <option value="10">XG Boost</option>
+                  <option value="11">K Nearest Neighbors</option>
+                  <option value="12">Linear Regression</option>
+                  <option value="13">MARS</option>
+                  <option value="17">NLP</option>
+                  <option value="14">Simple RNN</option>
+                  <option value="15">GRU</option>
+                  <option value="16">LSTM</option>
+                  </select></div>
+
+      <div class="col-sm-6 text-left">
+        <input type="submit" class="btn btn-success btn-lg pred" value="Predict">
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</body>

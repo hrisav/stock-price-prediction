@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Predict Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url("/static/bgblur.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+
+    }
+
+  .navbar {
+  margin-bottom: 0;
+  background-color: #2f2f2f;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+  transition : 0.2s;
+
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: teal !important;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: 2px solid white;
+  font-size:20px;
+  font-weight: bold;
+  opacity:1;
+
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.full-ht {
+  background-color: rgb(0, 128, 128,0.8);
+  color:  #fff;
+  padding-top: 5%;
+  height:100%;
+  font-family: Raleway; sans-serif;
+
+
+
+}
+.main{
+
+  padding-top: 10%;
+}
+
+
+
+</style>
+</head>
+
+<body>
+  <div class="container-fluid text-center full-ht">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{url_for('home')}}" >Stock Price Prediction</a>
+          </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{{url_for('about')}}">ABOUT</a></li>
+              <li><a href="">SERVICES</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <h1>{{model_name}}</h1>
+    <br>
+    <div id="pat">
+      '<img src="bg1" id="imageBox" alt="{{img_path}}" style="height:55%;width:65%;">';
+  </div>
+     <br><br>
+     <h1>{{score_value}}</h1>
+
+     <script type="text/javascript">
+        (()=>{
+            var path='{{img_path}}';
+            a='/static/'+path;
+            document.getElementById("imageBox").src = a;
+          })();
+     </script>
+
+     <div class="row">
+       <div class="col-sm-12" style="padding-top:20px;">
+         <a href="{{url_for('home')}}" class="btn btn-primary btn-lg" ><b style="padding-left:30px;padding-right:30px;">Reset<b></a></div></div>
+</div>
+</body>

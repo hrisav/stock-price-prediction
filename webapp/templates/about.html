@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>About Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  html body{
+    height:100%;
+    width:100%;
+  }
+  .container-fluid {
+    font-family: 'Raleway', sans-serif;
+
+  }
+  .person {
+
+    width: 50%;
+    height: 50%;
+    opacity: 0.9;
+    transition: 1s;
+  }
+  .person:hover {
+    width:70%;
+    height:70%;
+    border:5px solid #001a1a;
+    opacity:1;
+  }
+
+  .bg-4{
+
+     background-color: #006666;#2f2f2f;
+     color: #ffffff;
+     padding-top: 0.1px;
+     padding-bottom: 0.5px;
+     border-bottom: 5px solid #001a1a;
+    }
+     .opaq-img{
+       background-image: url("{{url_for('static',filename='bgblur.jpg')}}");
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+       background-attachment: fixed;
+     }
+   .bgclr{
+      width:100%;
+      margin:0;
+      padding:0;
+      color:white;
+
+    }
+    .main{
+      height:100%;
+      width:100%;
+      margin:0;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class = " main container-fluid row bg-4 text-center align-items-center jumbotron">
+<div class="col-sm-11">
+<h1 style="font-size:50px;">Project Members</h1>
+  <p><em>We love Data Science!</em></p>
+</div>
+<div class = "col-sm-1  align-self-center">
+<a class="text-center" href="{{url_for('home')}}"><p style="font-size:20px;color:white;padding-top:40%;">Home</p></a>
+</div>
+</div>
+<div class="container-fluid opaq-img">
+<div class="container-fluid text-center bgclr" >
+<br>
+<br>
+  <div class="container-fluid row">
+    <div class="col-sm-4">
+      <img src="{{url_for('static',filename='profile/ananda.jpeg')}}" class="img-circle person" alt="Ananda Chatterjee" >
+      <h3 class="text-center"><strong>Ananda Chatterjee</strong></h3>
+       <ul  class="tran" style="list-style-type:none;padding:0;margin:0;font-size:18px">
+        <li>Time Series Analyses</li>
+        <li>Machine Learning Model Building</li>
+       </ul>
+    </div>
+
+    <div class="col-sm-4">
+       <img src="{{url_for('static',filename='profile/avinash.jpeg')}}" class="img-circle person" alt="Avinash Yadav" width="500" height="600">
+      <h3 class="text-center"><strong>Avinash Yadav</strong></h3>
+        <ul class="trans-vis" style="list-style-type:none;padding:0;margin:0;font-size:18px">
+        <li>UI Designer</li>
+        <li>Backend Developing</li>
+       </ul>
+
+    </div>
+
+    <div class="col-sm-4">
+     <img src="{{url_for('static',filename='profile/hrisav.jpeg')}}" class="img-circle person" alt="Hrisav Bhowmick" width="255" height="255">
+     <h3 class="text-center"><strong>Hrisav Bhowmick</strong></h3>
+     <ul class="trans-vis" style="list-style-type:none;padding:0;margin:0;font-size:18px">
+        <li>Deep Learning Analyses</li>
+        <li>Model Building</li>
+       </ul>
+     </div>
+  </div>
+
+<div class="container-fluid row" style"margin:25px">
+    <div class="col-sm-4 col-md-offset-2">
+     <img src="{{url_for('static',filename='profile/sankalpa.jpeg')}}" class="img-circle person" alt="Sankalpa Saha" width="255" height="255">
+     <h3 class="text-center"><strong>Sankalpa Saha</strong></h3>
+     <ul class="trans-vis" style="list-style-type:none;padding:0;margin:0;font-size:18px">
+        <li>Presentation</li>
+        <li>Data Gathering</li>
+       </ul>
+    </div>
+
+    <div class="col-sm-4 ">
+     <img src="{{url_for('static',filename='profile/vineet.jpeg')}}" class="img-circle person" alt="Vineet Kumar" width="255" height="255">
+     <h3 class="text-center"><strong>Vineet Kumar</strong></h3>
+     <ul class="trans-vis" style="list-style-type:none;padding:0;margin:0;font-size:18px;">
+        <li>Time Series Analyses</li>
+        <li>Machine Learning Model Building</li>
+       </ul>
+    </div>
+  </div>
+<div><br><br></div>
+</div>
+</div>
+
+
+
+</body>
+</html>
